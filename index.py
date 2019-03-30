@@ -71,12 +71,12 @@ def getCost(itemUrl):
     isProductPage = pattern.search(script).group(1)
     
     jsonProduct = json.loads(isProductPage)
-    Cost = jsonProduct['item']['shipment']
+    cost = jsonProduct['item']['shipment']
 
-    CostArray = []
-    CostArray.append(Cost)
+    costArray = []
+    costArray.append(cost)
     
-    return (CostArray)
+    return (costArray)
 
 # Runten_Spider(url)
 
