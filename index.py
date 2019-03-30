@@ -20,7 +20,7 @@ def Runten_Spider(url):
     itemCost = []
     for index, item in enumerate(item_title[:30]):
         url = item.find('a').get('href')
-        itemCost.append(getCost(url))
+        itemCost.append(getItemCost(url))
 
 #     print (itemTitle)
 #     print (itemImg)
@@ -58,7 +58,7 @@ def getItemImg(soup):
     return (item_img_list)
         
     
-def getCost(itemUrl):
+def getItemCost(itemUrl):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0'}
     resp = requests.get(itemUrl,headers = headers) 
     resp.encoding = 'utf-8'
